@@ -1,6 +1,6 @@
-## Exercícios da Semana 2 do conteúdo de javacript 
+# Exercícios da Semana 2 do conteúdo de javacript 
 
-# Exercício 4 
+## Exercício 4 
 <br>
 Deverá ser criado uma página HTML com a funcionalidade de pesquisar CEP's, onde após eu preencher um input e clicar em um botão este deverá fazer a requisição para uma API
 <br>
