@@ -8,7 +8,13 @@ btn.addEventListener("click", buscaPokemon());
 function buscaPokemon() {
     let pokemon = input.value;
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-        .then(response => response.json())
+        .then(response => {
+            if (response.status >= 400) {
+                console.log("Erro!");
+            } else {
+                response.json();
+            }
+        })
         .then(dados => {
             console.log(dados);
             div.innerHTML = "<ul> HP:" + dados.hp + "<ul> </br>" +
@@ -19,6 +25,5 @@ function buscaPokemon() {
                 "<ul> Speed:" + dados.speed + "<ul> </br>";;
         }
         )
-        .catch((erro) =>
-            console.log("Erro na busca!" + erro));
+
 }
