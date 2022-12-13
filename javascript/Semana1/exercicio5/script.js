@@ -11,8 +11,9 @@ function buscaPokemon() {
         .then(response => {
             if (response.status >= 400) {
                 console.log("Erro!");
+            } else {
+                response.json();
             }
-            response.json()
         })
         .then(dados => {
             console.log(dados);
